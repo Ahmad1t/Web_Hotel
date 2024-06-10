@@ -10,7 +10,7 @@ builder.Services.AddRepository();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapperConfig();
 builder.Services.AddDb(builder.Configuration);
-//builder.Services.AddControllerService();
+builder.Services.AddControllerService();
 
 // Add services to the container.
 

@@ -23,7 +23,7 @@ namespace BLL.Service.Users
             _mapper = mapper;
         }
 
-        public override ApiResponse<bool> Delete(int id)
+/*        public override ApiResponse<bool> Delete(int id)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace BLL.Service.Users
         public override ApiResponse<bool> Delete(Userdto id)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         public bool login(string userName, string password)
         {

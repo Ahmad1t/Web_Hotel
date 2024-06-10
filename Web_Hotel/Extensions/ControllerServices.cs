@@ -1,4 +1,4 @@
-﻿/*using Web_Hotel.Filters;
+﻿using Web_Hotel.Filters;
 namespace Web_Hotel.Extensions
 {
     public static class ControllerServices
@@ -14,4 +14,3 @@ namespace Web_Hotel.Extensions
         }
     }
 }
-*/

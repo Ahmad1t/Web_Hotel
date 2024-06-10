@@ -3,6 +3,7 @@ using BLL.Wrapping;
 using DAL.Repositories._Generics;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,10 +64,18 @@ namespace BLL.Service._Generic
 
         public virtual ApiResponse<bool> Delete(int id)
         {
-            var response = new ApiResponse<bool>();
+            if (id != 0)
+            {
+                var response = new ApiResponse<bool>();
+                response.Data = _repository.Delete(id);
+                return response;
+            }
+            else
+            {
+                throw new ValidationException("Validation failed for the request.");
+            }
 
-            response.Data = _repository.Delete(id);
-            return response;
+
         }
 
         public virtual ApiResponse<bool> Delete(Dto dto)
